@@ -55,7 +55,7 @@ jobs:
         with:
           role-to-assume: ${{ env.AWS_ROLE }}
           role-duration-seconds: 900 # the ttl of the session, in seconds.
-          aws-region: ap-southeast-1
+          aws-region: ap-southeast-3
       - name: Deploy to S3
         run: |
           aws s3 sync . s3://${{ env.S3_BUCKET }} --exact-timestamps --delete --cache-control max-age=31536000,public --acl public-read
