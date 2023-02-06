@@ -10,6 +10,9 @@ Tutorial ini adalah cara penggunaan dokumentasi kami
 
 Anda bisa akses Postman Collection kami pada link berikut: 
 
+[https://documenter.getpostman.com/view/4673729/2s935oMjda](https://documenter.getpostman.com/view/4673729/2s935oMjda)
+
+
 ### API 
 
 API kami bisa diakses pada URL
