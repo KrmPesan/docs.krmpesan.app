@@ -15,15 +15,21 @@ Di sistem baru kami, ada 3 data token yang akan digunakan, yaitu:
 
 #### Request
 
-- Body Parameters
-
-
+- URL
 
 ```
-POST https://api.krmpesan.app/token
+GET https://api.krmpesan.app/token
 ```
 
-#### Tab
+- Query String
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `refresh_token` | `string` | Refresh Token yang didapat dari sistem login |
+| `device_id` | `string` | Device ID yang didapat dari sistem login |
+
+
+#### Example Request
 
 ```
 curl -s "https://api.krmpesan.app/tokens?refresh_token=eyJjdHkiOiJKxxxxxxxx&device_key=ap-southeast-1_3445xxxxx" \
@@ -33,20 +39,19 @@ curl -s "https://api.krmpesan.app/tokens?refresh_token=eyJjdHkiOiJKxxxxxxxx&devi
 
 #### Response
 
-
 | Fields | Type | Description |
 | --- | --- | --- |
 | `IdToken` | `string` | Token untuk akses ke REST API |
-| `ExpiresIn` | `int` | Waktu kadaluarsa token |
+| `ExpiresIn` | `int` | Waktu kadaluarsa token (24 Jam) |
 
 
 ```json
 {
-    "AccessToken": "eyJraWQiOiIwajZFcHZ4cTNcL2hscnJ6MDdDbEZVelU0bnpkeXA3eEhVN245XC9Yb0lvd009IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJjMTZiYWY2My0xOGI5LTQ2MDAtODYwZS05N2Y0NTE1MjEzMmMiLCJkZXZpY2Vfa2V5IjoiYXAtc291dGhlYXN0LTFfMzQ0NTFlNGMtZjA4YS00NTkzLTk3NjItNjU4YmIwOWM2Zjk3IiwiY29nbml0bzpncm91cHMiOlsidXNlciIsIkRFViM2MjgzMTM4ODU1Nzc0Il0sImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMS5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMV9qS1RZVk5mVm4iLCJjbGllbnRfaWQiOiIzZ2FzZ2JydmtlM2o4NXR1dXA5ZnN0ODhhaCIsIm9yaWdpbl9qdGkiOiJiYWE4ODUyZC1iZDU3LTQ2OTEtOGI3OC1iNmU0ZGVkNjAwMWQiLCJldmVudF9pZCI6IjA4OWE1YjE1LTExYmYtNGY2Zi1hMDcxLTJiMWM1Mzk1ZTgxMCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2Njk5MDcxNDUsImV4cCI6MTY3NDYxMTQxNCwiaWF0IjoxNjc0NTI1MDE0LCJqdGkiOiJkNzIyZGNlOC0wY2YwLTRhYTMtOWE0Yy02YjNiYmNlMzM5MDQiLCJ1c2VybmFtZSI6ImMxNmJhZjYzLTE4YjktNDYwMC04NjBlLTk3ZjQ1MTUyMTMyYyJ9.K5ktcHzPa5f1Eoop0Rl0Hurh7JfBOIuSqB-kQT6xJ2Voq32e8Hg7i7YSBV5Wfi34K8I9A8n_tUiSz6q5_zJGMdaxToKtFwZpymLlSyjsZDCsujE0eH1aymWIWcsE0eDUbYZka5VzgjTQK5wKRbpKsD0DDZ7FZ_sKXsYG6tlByATp66Cqw7322dSd0L7HrJfeZj2IANZSWvoqeqBNLRM9nz7VEyr4zwZNEVch0JzY2_CGbHdTA8t5d0hPYV2KAHwN17tmRACOe1QnHsbfi0Sy4yNTjqGo42-xStu0gk7yNRIMKzMho1wNnq1F5n9IDtu5EFVnYMz_OWFOnfrLo80fug",
+    "AccessToken": "eyJraWQiOiIwajZFcHxxxxxxxxx",
     "ExpiresIn": 86400,
     "TokenType": "Bearer",
-    "IdToken": "eyJraWQiOiJnZEJyMUh0alNlTVZjcFlCMnpVaXR5U0JtWTFYRWU2VWZhNVAyQkppZ2ZNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJjMTZiYWY2My0xOGI5LTQ2MDAtODYwZS05N2Y0NTE1MjEzMmMiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIiwiREVWIzYyODMxMzg4NTU3NzQiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMS5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMV9qS1RZVk5mVm4iLCJjb2duaXRvOnVzZXJuYW1lIjoiYzE2YmFmNjMtMThiOS00NjAwLTg2MGUtOTdmNDUxNTIxMzJjIiwib3JpZ2luX2p0aSI6ImJhYTg4NTJkLWJkNTctNDY5MS04Yjc4LWI2ZTRkZWQ2MDAxZCIsImF1ZCI6IjNnYXNnYnJ2a2Uzajg1dHV1cDlmc3Q4OGFoIiwiZXZlbnRfaWQiOiIwODlhNWIxNS0xMWJmLTRmNmYtYTA3MS0yYjFjNTM5NWU4MTAiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY2OTkwNzE0NSwibmFtZSI6IktybSBQZXNhbiIsImV4cCI6MTY3NDYxMTQxNCwiaWF0IjoxNjc0NTI1MDE0LCJqdGkiOiJmOGZlMDk1MS00ZTI0LTQyNjktYjgxYy0zNmZhM2Q0N2FjN2EiLCJlbWFpbCI6ImtybXN1cEBrcm1wZXNhbi5jb20ifQ.KsshiEmuOWmiT5bdz_g-ky_QQYTgsBEWJqCmK2eUL9lbaRFNqI2sUEKLk1Jjf635mgEYjy-R4VXxWFlC1CjJpbwlAecyZPqSfQUnHhk6rmbdrCTCw8MhwI7fqelQJWlpTRXkGS5WOKwVXptAb29XWljSVHXSMrPH_nhervmMF5vXV2mU6cLl9zKNoYUC1d9b63dGjNsfsnyBGn6w6qxM2kBvdEkkvbSxPsVrXsNO6hI7i_YjZNdBFHc49JUhfzhLjzJz590bzCDPmUjv6GQMtAA2nXE0P8HCHYqkYSWFmIvN3MgQgGsDDYbrtibRy9S6KocSetQtPBl2PeQ_x2pkKQ"
+    "IdToken": "eyJraWQiOiJnZEJyMUh0alNlTVZjcFxxxxxxx"
 }
 ```
 
-
+Setelah mendapatkan token, simpan IdToken untuk digunakan pada saat akses ke REST API selanjutnya selama 24 jam.
