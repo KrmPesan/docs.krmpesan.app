@@ -35,7 +35,7 @@ $wa = new ClientV3([
 ]);
 ```
 
-## Kirim Pesan Text
+## Kirim Pesan Template Template Text
 
 ### Request
 
@@ -65,68 +65,153 @@ stdClass Object
 )
 ```
 
-## Kirim Pesan Document
+## Kirim Pesan Template Body + Header Image
 
 ### Request
 
 ```php
+$template = [
+    "body" => [
+        "hello",
+        "world"
+    ],
+    "header" => [
+        "type" => "image",
+        "url" => "https://example.com/image.jpg",
+    ]
+];
 
+$wa->sendMessageTemplate('628123456789', 'sample-message-image', 'id', $template);
+```
+
+### Response
+
+```php
+stdClass Object
+(
+    [code] => 200
+    [message] => success
+    [data] => stdClass Object
+        (
+            [id] => wamid.xxx
+        )
+
+)
+```
+
+## Kirim Pesan Template Body + Header PDF
+
+### Request
+
+```php
+$template = [
+    "body" => [
+        "hello",
+        "world"
+    ],
+    "header" => [
+        "type" => "document",
+        "url" => "https://example.com/document.pdf",
+    ]
+];
+
+$wa->sendMessageTemplate('628123456789', 'sample-message-document', 'id', $template);
 ```
 
 ### Response
 
 ```php
 
+stdClass Object
+(
+    [code] => 200
+    [message] => success
+    [data] => stdClass Object
+        (
+            [id] => wamid.xxx
+        )
+
+)
 ```
-## Kirim Pesan Image
 
-### Request
-
-```php
-
-```
-
-### Response
-
-```php
-
-```
 ## Reply Pesan Text
 
 ### Request
 
 ```php
-
+$reply = [
+    "type" => "text",
+    "text" => "ini adalah balasannya"
+];
+$wa->sendReply('628123456789', $reply);
 ```
 
 ### Response
 
 ```php
+stdClass Object
+(
+    [code] => 200
+    [message] => success
+    [data] => stdClass Object
+        (
+            [id] => wamid.xxx
+        )
 
+)
 ```
-## Reply Pesan Document
+
+## Reply Pesan Body + Header Image
 
 ### Request
 
 ```php
-
+$reply = [
+    "type" => "image",
+    "text" => "https://example.com/image.jpg",
+    "caption" => "optional, kalau tidak ada kasih null."
+];
+$wa->sendReply('628123456789', $reply);
 ```
 
 ### Response
 
 ```php
+stdClass Object
+(
+    [code] => 200
+    [message] => success
+    [data] => stdClass Object
+        (
+            [id] => wamid.xxx
+        )
 
+)
 ```
-## Reply Pesan Image
+
+## Reply Pesan Body + Header PDF
 
 ### Request
 
 ```php
-
+$reply = [
+    "type" => "document",
+    "text" => "https://example.com/document.pdf"
+];
+$wa->sendReply('628123456789', $reply);
 ```
 
 ### Response
 
 ```php
+stdClass Object
+(
+    [code] => 200
+    [message] => success
+    [data] => stdClass Object
+        (
+            [id] => wamid.xxx
+        )
 
+)
 ```
