@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-## Authentication
+# Authentication
 
 Di sistem baru kami, ada 3 data token yang akan digunakan, yaitu:
 

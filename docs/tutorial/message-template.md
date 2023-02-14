@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Mesage Template
+# Message Template
 
 Sebelum anda mulai menggunakan aplikasi kami, anda harus membuat template pesan yang akan anda gunakan untuk mengirimkan pesan.
 
