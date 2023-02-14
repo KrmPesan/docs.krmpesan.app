@@ -11,9 +11,38 @@ Di sistem baru kami, ada 3 data token yang akan digunakan, yaitu:
 3. Device ID = Uniq ID untuk identifikasi Token, Aktif Permanent bersamaan dengan Refresh Token
 
 
-### Refresh Token
+## Flow
 
-#### Request
+### Generate Token
+
+```mermaid
+graph TD
+    A[User] --> B[Login]
+    B --> C[Halaman Device]
+    C --> D[Masukkan Password Pada Kolom Token]
+    D --> E[Generate Token]
+    E --> F[Token Berhasil Dibuat]
+    F --> G[Simpan Token: `IdToken`, `RefreshToken`, `DeviceId`]
+```
+
+### Token Validation
+
+```mermaid
+graph TD
+    A[User] --> B[Generate Token]
+    B --> C[IdToken Valid]
+    C --> D[HIT REST API]
+    D --> F[Autorisasi Berhasil]
+    D --> G[Autorisasi Gagal, Token Expired/ Invalid]
+    F --> H[Return Response]
+    G --> I[Generate IdToken Baru Berdasarkan RefreshToken]
+    I --> J[Gunakan IdToken Baru]
+    J --> D
+```
+
+## Refresh Token
+
+### Request
 
 - URL
 
@@ -29,7 +58,7 @@ GET https://api.krmpesan.app/token
 | `device_id` | `string` | Device ID yang didapat dari sistem login |
 
 
-#### Example Request
+### Example Request
 
 ```
 curl -s "https://api.krmpesan.app/tokens?refresh_token=eyJjdHkiOiJKxxxxxxxx&device_key=ap-southeast-1_3445xxxxx" \
@@ -37,7 +66,7 @@ curl -s "https://api.krmpesan.app/tokens?refresh_token=eyJjdHkiOiJKxxxxxxxx&devi
 ```
 
 
-#### Response
+### Response
 
 | Fields | Type | Description |
 | --- | --- | --- |

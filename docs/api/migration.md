@@ -12,6 +12,18 @@ Jika anda sudah menggunakan sistem lama kami, anda bisa melakukan migrasi ke sis
 4. `IdToken` digunakan untuk akses ke REST API selama 24 jam, jika sudah lebih dari 24 jam, gunakan `RefreshToken` dan `DeviceId` untuk generate `IdToken` yang baru.
 
 
+## Flow
+
+```mermaid
+graph TD
+    A[User] --> B[Login]
+    B --> C[Halaman Device]
+    C --> D[Masukkan Password Pada Kolom Token]
+    D --> E[Generate Token]
+    E --> F[Token Berhasil Dibuat]
+    F --> G[Simpan Token: `IdToken`, `RefreshToken`, `DeviceId`]
+```
+
 ### Template
 
 - Pada sistem baru kami, anda hanya bisa mengirim pesan ke nomor baru menggunakan template pesan, pastikan template pesan anda sudah di approve terlebih dahulu sebelum digunakan.
