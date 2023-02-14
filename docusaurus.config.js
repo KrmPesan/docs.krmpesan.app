@@ -79,6 +79,12 @@ const config = {
             label: 'API',
           },
           {
+            type: 'doc',
+            docId: 'sdk/intro',
+            position: 'left',
+            label: 'SDK',
+          },
+          {
             href: 'https://github.com/KrmPesan/docs.krmpesan.app',
             label: 'GitHub',
             position: 'right',
@@ -114,6 +120,11 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 module.exports = config;
