@@ -8,6 +8,19 @@ Sebelum anda mulai menggunakan aplikasi kami, anda harus membuat template pesan 
 
 Message template dapat berupa text, gambar, atau dokumen dengan format yang didukung oleh aplikasi kami.
 
+## Flow Message Template
+
+```mermaid
+graph TD
+  U[User] --> C[Create Message Template]
+  C --> V[System Send To Whatsapp For Verification]
+  V --> AA[Approved]
+  V --> AB[Rejected]
+  AB --> AC[Need More Information]
+  AC --> C
+  AA --> D[Done, Message Template Ready To Use]
+```
+
 ## Cara membuat message template
 
 1. Pilih menu **Message Template** pada sidebar kiri
