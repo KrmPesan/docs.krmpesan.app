@@ -79,6 +79,12 @@ const config = {
             label: 'API',
           },
           {
+            type: 'doc',
+            docId: 'sdk/intro',
+            position: 'left',
+            label: 'SDK',
+          },
+          {
             href: 'https://github.com/KrmPesan/docs.krmpesan.app',
             label: 'GitHub',
             position: 'right',
