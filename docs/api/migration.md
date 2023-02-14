@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-## Migration
+# Migration
 
 Jika anda sudah menggunakan sistem lama kami, anda bisa melakukan migrasi ke sistem baru kami dengan mengikuti langkah-langkah berikut:
 

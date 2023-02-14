@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-## Intoduction
+# Intoduction
 
 Pada bagian ini, kami akan membahas tutorial dasar penggunaan aplikasi kami.
 

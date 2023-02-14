@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-## Intoduction
+# Intoduction
 
 Tutorial ini adalah cara penggunaan dokumentasi kami
 
