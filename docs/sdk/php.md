@@ -150,17 +150,12 @@ stdClass Object
 )
 ```
 
-
 ## Reply Pesan Text
 
 ### Request
 
 ```php
-$reply = [
-    "type" => "text",
-    "text" => "ini adalah balasannya"
-];
-$wa->sendReply('628123456789', $reply);
+$wa->sendReplyText('628123456789', "ini adalah balasannya");
 ```
 
 ### Response
@@ -183,12 +178,7 @@ stdClass Object
 ### Request
 
 ```php
-$reply = [
-    "type" => "image",
-    "url" => "https://example.com/image.jpg",
-    "caption" => "optional, kalau tidak ada kasih null."
-];
-$wa->sendReply('628123456789', $reply);
+$wa->sendReplyImage('628123456789', 'https://example.com/image.jpg', 'optional, kalau tidak ada kasih null.');
 ```
 
 ### Response
@@ -211,11 +201,7 @@ stdClass Object
 ### Request
 
 ```php
-$reply = [
-    "type" => "document",
-    "text" => "https://example.com/document.pdf"
-];
-$wa->sendReply('628123456789', $reply);
+$wa->sendReplyDocument('628123456789', 'https://example.com/document.pdf');
 ```
 
 ### Response
@@ -229,6 +215,5 @@ stdClass Object
         (
             [id] => wamid.xxx
         )
-
 )
 ```
