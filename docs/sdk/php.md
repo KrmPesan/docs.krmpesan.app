@@ -35,19 +35,17 @@ $wa = new ClientV3([
 ]);
 ```
 
-## Kirim Pesan Template Template Text
+## Kirim Pesan Template Text
 
 ### Request
 
 ```php
-$template = [
-    "body" => [
-        "hello",
-        "world"
-    ]
+$body = [
+    "hello",
+    "world"
 ];
 
-$wa->sendMessageTemplate('628123456789', 'sample-message', 'id', $template);
+$wa->sendMessageTemplateText('628123456789', 'sample-message', 'id', $body);
 ```
 
 ### Response
@@ -70,18 +68,12 @@ stdClass Object
 ### Request
 
 ```php
-$template = [
-    "body" => [
-        "hello",
-        "world"
-    ],
-    "header" => [
-        "type" => "image",
-        "url" => "https://example.com/image.jpg",
-    ]
+$body = [
+    "hello",
+    "world"
 ];
-
-$wa->sendMessageTemplate('628123456789', 'sample-message-image', 'id', $template);
+$image = "https://example.com/image.jgp";
+$wa->sendMessageTemplateImage('628123456789', 'sample-message-image', 'id', $body, $image);
 ```
 
 ### Response
@@ -104,18 +96,13 @@ stdClass Object
 ### Request
 
 ```php
-$template = [
-    "body" => [
-        "hello",
-        "world"
-    ],
-    "header" => [
-        "type" => "document",
-        "url" => "https://example.com/document.pdf",
-    ]
+$body = [
+    "hello",
+    "world"
 ];
+$document = "https://example.com/document.pdf";
 
-$wa->sendMessageTemplate('628123456789', 'sample-message-document', 'id', $template);
+$wa->sendMessageTemplateDocument('628123456789', 'sample-message-document', 'id', $body, $document);
 ```
 
 ### Response
@@ -133,6 +120,36 @@ stdClass Object
 
 )
 ```
+
+## Kirim Pesan Template Body + Button
+
+### Request
+
+```php
+$body = [
+    "hello",
+    "world"
+];
+$button = "https://example.com/";
+
+$wa->sendMessageTemplateButton('628123456789', 'sample-message-button', 'id', $body, $button);
+```
+
+### Response
+
+```php
+
+stdClass Object
+(
+    [code] => 200
+    [message] => success
+    [data] => stdClass Object
+        (
+            [id] => wamid.xxx
+        )
+)
+```
+
 
 ## Reply Pesan Text
 
@@ -168,7 +185,7 @@ stdClass Object
 ```php
 $reply = [
     "type" => "image",
-    "text" => "https://example.com/image.jpg",
+    "url" => "https://example.com/image.jpg",
     "caption" => "optional, kalau tidak ada kasih null."
 ];
 $wa->sendReply('628123456789', $reply);
