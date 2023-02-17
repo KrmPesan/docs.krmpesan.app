@@ -37,15 +37,34 @@ Jika anda masih dalam masa session 24 jam, maka pesan yang anda kirimkan tidak a
 
 ```mermaid
 graph TD
-  U[User] --> S[Send Message]
-  S --> V[System Check If Session Is Active]
-  V --> AA[Session Is Active]
-  V --> AB[Session Is Not Active]
-  AA --> AC[User Not Pay Anything = FREE]
-  AC --> AD[Send Message To Whatsapp]
-  AD --> AE[Message Sent]
-  AB --> AF[Create New Session and Deduct Balance]
-  AF --> AD[Send Message To Whatsapp]
+  U[User] --> S[Kirim Pesan via API/Website]
+  S --> V[Sistem Validasi Kategori Pesan]
+  V --> CS[Cek Apakah Anda Masih Dalam Masa Session 24 Jam]
+  CS --> CSA[Ya]
+  CS --> CSB[Tidak]
+  CSA --> CSAA[Tidak Ada Tagihan = GRATIS]
+  CSAA --> CSAB[Meneruskan Pesan]
+  CSAB --> P[Pengiriman Pesan via Whatsapp] 
+  P --> D[Done]
+
+  CSB --> SE[Sesi 24 Jam Tidak ada atau sudah berakhir]
+  SE --> SEA[Cek Quota]
+  SEA --> SEAA[Quota Masih Ada]
+  SEAA --> SEAB[Proses Pemotongan Quota]
+  SEAB --> SEAC[Meneruskan Pesan]
+  SEAC --> P
+
+  SEA --> SEB[Quota Habis]
+  SEB --> CSS[Cek Saldo]
+  CSS --> CSSA[Saldo Masih Ada]
+
+  CSSA --> CSSAA[Proses Pemotongan Saldo]
+  CSSAA --> CSSAB[Meneruskan Pesan]
+  CSSAB --> P
+
+  CSS --> CSSB[Saldo Habis]
+  CSSB --> E[Error]
+  
 ```
 
 ## Contoh Pengiriman Pesan ke 1 Nomor Whatsapp
@@ -54,15 +73,15 @@ Anda mengirimkan pesan ke 1 nomor whatsapp, dan pesan tersebut berhasil dikirimk
 
 Berikut adalah contoh pengiriman pesan ke 1 nomor whatsapp:
 
-| No | Waktu | Pesan | Status | Keterangan |
+| No | Waktu | Pesan | Status | Tujuan |
 | --- | --- | --- | --- | --- |
-| 1 | 07:00 | Pesan 1 | Sukses | - |
-| 2 | 12:01 | Pesan 2 | Sukses | - |
-| 3 | 14:02 | Pesan 3 | Sukses | - |
-| 4 | 16:03 | Pesan 4 | Sukses | - |
-| 5 | 21:04 | Pesan 5 | Sukses | - |
-| 6 | 23:05 | Pesan 6 | Gagal | - |
-| 7 | 23:06 | Pesan 7 | Sukses | - |
+| 1 | 07:00 | Pesan 1 | Sukses | 1 Nomor |
+| 2 | 12:01 | Pesan 2 | Sukses | 1 Nomor |
+| 3 | 14:02 | Pesan 3 | Sukses | 1 Nomor |
+| 4 | 16:03 | Pesan 4 | Sukses | 1 Nomor |
+| 5 | 21:04 | Pesan 5 | Sukses | 1 Nomor |
+| 6 | 23:05 | Pesan 6 | Gagal | 1 Nomor |
+| 7 | 23:06 | Pesan 7 | Sukses | 1 Nomor |
 
 Anda akan kami tagihkan Rp. 600 yaitu pada **Pesan 1**, dan **Pesan 2** sampai **Pesan 7** tidak akan terpotong dari saldo anda, karena anda masih dalam masa session 24 jam.
 
@@ -72,10 +91,23 @@ Anda mengirimkan pesan ke 100 nomor whatsapp, dan pesan tersebut berhasil dikiri
 
 Berikut adalah contoh pengiriman pesan ke 100 nomor whatsapp:
 
-| No | Waktu | Pesan | Status | Keterangan |
+| No | Waktu | Pesan | Status | Tujuan |
 | --- | --- | --- | --- | --- |
-| 1 | 07:00 | Pesan 1 | Sukses | - |
-| 2 | 12:01 | Pesan 2 | Sukses | - |
-| 3 | 14:02 | Pesan 3 | Sukses | - |
+| 1 | 07:00 | Pesan 1 | Sukses | 100 Nomor |
+| 2 | 12:01 | Pesan 2 | Sukses | 100 Nomor |
+| 3 | 14:02 | Pesan 3 | Sukses | 100 Nomor |
 
 Anda mengirimkan 3x pesan ke 100 nomor whatsapp, yang kami tagihkan yaitu pada **Pesan 1**, selanjutnya **Pesan 2** dan **Pesan 3** tidak akan terpotong dari saldo anda, karena anda masih dalam masa session 24 jam.
+
+## Contoh Pengiriman Pesan ke 2000 Nomor Whatsapp (Quota + Saldo)
+
+Anda mengirimkan pesan ke 2000 nomor whatsapp, dan pesan tersebut berhasil dikirimkan, maka quota anda akan terpotong sebesar **1 Nomor * 1.000 Quota Gratis = 1.000 Quota**, dan saldo anda akan terpotong sebesar **Rp. 600 x 1.000 = Rp. 600.000**, dan saldo anda akan terpotong setiap anda mengirimkan pesan ke nomor whatsapp setelah 24 jam.
+
+Berikut adalah contoh pengiriman pesan ke 2000 nomor whatsapp:
+| No | Waktu | Pesan | Status | Tujuan |
+| --- | --- | --- | --- | --- |
+| 1 | 07:00 | Pesan 1 | Sukses | 2000 Nomor |
+| 2 | 12:01 | Pesan 2 | Sukses | 2000 Nomor |
+| 3 | 14:02 | Pesan 3 | Sukses | 2000 Nomor |
+
+Anda mengirimkan 3x pesan ke 2000 nomor whatsapp, yang kami tagihkan yaitu pada **Pesan 1**, selanjutnya **Pesan 2** dan **Pesan 3** tidak akan terpotong dari saldo anda, karena anda masih dalam masa session 24 jam.
