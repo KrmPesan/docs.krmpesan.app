@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # WHMCS
@@ -8,12 +8,36 @@ sidebar_position: 2
 
 ## Template
 
+Pastikan anda memilih kategori berikut:
+
+- Category: `Transactional/Utility`
+- Language: `Indonesia`
+
+
+### Admin Login
+
+- Name: `WHMCS Admin Login`
+- Slug: `whmcs_admin_login`
+- Header: **None / Tidak ada**
+- Body:
+
+```
+Halo {{1}},
+Login baru oleh admin/staff dengan akun: *{{2}}* pada website: {{3}}.
+
+Access Detail:
+*Waktu* : {{4}}
+*Alamat IP* : {{5}}
+*Browser* : {{6}}
+
+Sekian Informasinya.
+{{7}}
+```
+
 ### Admin Order Notification
 
 - Name: `WHMCS Admin Order`
 - Slug: `whmcs_admin_order`
-- Category: `Transactional/Utility`
-- Language: `Indonesian`
 - Header: **None / Tidak ada**
 - Body:
 
@@ -38,8 +62,6 @@ Sekian Informasinya.
 
 - Name: `WHMCS Admin Payment`
 - Slug: `whmcs_admin_payment`
-- Category: `Transactional/Utility`
-- Language: `Indonesian`
 - Header: **None / Tidak ada**
 - Body:
 
@@ -56,20 +78,6 @@ Sekian Informasinya.
 {{6}}
 ```
 
-### Admin Login
-
-```
-Halo {{1}},
-Login baru oleh admin/staff dengan akun: *{{2}}* pada website: {{3}}.
-
-Access Detail:
-*Waktu* : {{4}}
-*Alamat IP* : {{5}}
-*Browser* : {{6}}
-
-Sekian Informasinya.
-{{7}}
-```
 
 ### Admin Support Ticket
 
@@ -77,7 +85,7 @@ Sekian Informasinya.
 Halo {{1}},
 Berikut support tiket {{2}} yang harus anda cek.
 
-Detail Tiket
+Detail Support Tiket:
 *ID*: #{{3}}
 *Subject* : {{4}}
 *Priority* : {{5}}
