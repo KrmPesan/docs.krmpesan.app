@@ -6,13 +6,15 @@ sidebar_position: 3
 
 ## Installation
 
-## Template Admin
+## Template
 
 Pastikan anda memilih kategori berikut:
 
 - Category: `Transactional/Utility`
 - Language: `Indonesia`
 
+
+## Template Admin
 
 ### Admin Login
 
@@ -158,7 +160,8 @@ Hormat Kami,
 
 ```
 Hi {{1}},
-Kami informasikan tentang tagihan {{1}} Anda.
+Kami informasikan tentang invoice tagihan Anda.
+Silahkan lakukan pembayaran untuk tagihan {{2}}.
 
 Berikut Detail Tagihan Anda:
 Nomor: *{{3}}*
@@ -179,7 +182,9 @@ Hormat Kami,
 
 ```
 Hi {{1}},
-Kami telah menerima tiket baru dari anda. Detail:
+Kami telah menerima tiket baru dari anda.
+
+Berikut detail tiket anda:
 
 *Ticket ID*: #{{2}}
 *Subject* : {{3}}
