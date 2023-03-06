@@ -26,7 +26,6 @@ Setiap pesan memiliki harga berbeda sesuai kategori nya mulai 1 Juni 2023, sebel
 
 :::
 
-
 ## Apa itu Session 24 Jam
 
 Session 24 jam adalah masa waktu yang kami gunakan untuk menghitung quota anda, setiap anda mengirimkan pesan ke nomor whatsapp, maka anda akan kami tagihkan sesuai dengan kategori pesan yang anda kirimkan.
@@ -44,7 +43,7 @@ graph TD
   CS --> CSB[Tidak]
   CSA --> CSAA[Tidak Ada Tagihan = GRATIS]
   CSAA --> CSAB[Meneruskan Pesan]
-  CSAB --> P[Pengiriman Pesan via Whatsapp] 
+  CSAB --> P[Pengiriman Pesan via Whatsapp]
   P --> D[Done]
 
   CSB --> SE[Sesi 24 Jam Tidak ada atau sudah berakhir]
@@ -64,7 +63,7 @@ graph TD
 
   CSS --> CSSB[Saldo Habis]
   CSSB --> E[Error]
-  
+
 ```
 
 ## Contoh Pengiriman Pesan ke 1 Nomor Whatsapp
@@ -73,15 +72,15 @@ Anda mengirimkan pesan ke 1 nomor whatsapp, dan pesan tersebut berhasil dikirimk
 
 Berikut adalah contoh pengiriman pesan ke 1 nomor whatsapp:
 
-| No | Waktu | Pesan | Status | Tujuan |
-| --- | --- | --- | --- | --- |
-| 1 | 07:00 | Pesan 1 | Sukses | 1 Nomor |
-| 2 | 12:01 | Pesan 2 | Sukses | 1 Nomor |
-| 3 | 14:02 | Pesan 3 | Sukses | 1 Nomor |
-| 4 | 16:03 | Pesan 4 | Sukses | 1 Nomor |
-| 5 | 21:04 | Pesan 5 | Sukses | 1 Nomor |
-| 6 | 23:05 | Pesan 6 | Gagal | 1 Nomor |
-| 7 | 23:06 | Pesan 7 | Sukses | 1 Nomor |
+| No  | Waktu | Pesan   | Status | Tujuan  |
+| --- | ----- | ------- | ------ | ------- |
+| 1   | 07:00 | Pesan 1 | Sukses | 1 Nomor |
+| 2   | 12:01 | Pesan 2 | Sukses | 1 Nomor |
+| 3   | 14:02 | Pesan 3 | Sukses | 1 Nomor |
+| 4   | 16:03 | Pesan 4 | Sukses | 1 Nomor |
+| 5   | 21:04 | Pesan 5 | Sukses | 1 Nomor |
+| 6   | 23:05 | Pesan 6 | Gagal  | 1 Nomor |
+| 7   | 23:06 | Pesan 7 | Sukses | 1 Nomor |
 
 Anda akan kami tagihkan Rp. 600 yaitu pada **Pesan 1**, dan **Pesan 2** sampai **Pesan 7** tidak akan terpotong dari saldo anda, karena anda masih dalam masa session 24 jam.
 
@@ -91,23 +90,24 @@ Anda mengirimkan pesan ke 100 nomor whatsapp, dan pesan tersebut berhasil dikiri
 
 Berikut adalah contoh pengiriman pesan ke 100 nomor whatsapp:
 
-| No | Waktu | Pesan | Status | Tujuan |
-| --- | --- | --- | --- | --- |
-| 1 | 07:00 | Pesan 1 | Sukses | 100 Nomor |
-| 2 | 12:01 | Pesan 2 | Sukses | 100 Nomor |
-| 3 | 14:02 | Pesan 3 | Sukses | 100 Nomor |
+| No  | Waktu | Pesan   | Status | Tujuan    |
+| --- | ----- | ------- | ------ | --------- |
+| 1   | 07:00 | Pesan 1 | Sukses | 100 Nomor |
+| 2   | 12:01 | Pesan 2 | Sukses | 100 Nomor |
+| 3   | 14:02 | Pesan 3 | Sukses | 100 Nomor |
 
 Anda mengirimkan 3x pesan ke 100 nomor whatsapp, yang kami tagihkan yaitu pada **Pesan 1**, selanjutnya **Pesan 2** dan **Pesan 3** tidak akan terpotong dari saldo anda, karena anda masih dalam masa session 24 jam.
 
 ## Contoh Pengiriman Pesan ke 2000 Nomor Whatsapp (Quota + Saldo)
 
-Anda mengirimkan pesan ke 2000 nomor whatsapp, dan pesan tersebut berhasil dikirimkan, maka quota anda akan terpotong sebesar **1 Nomor * 1.000 Quota Gratis = 1.000 Quota**, dan saldo anda akan terpotong sebesar **Rp. 600 x 1.000 = Rp. 600.000**, dan saldo anda akan terpotong setiap anda mengirimkan pesan ke nomor whatsapp setelah 24 jam.
+Anda mengirimkan pesan ke 2000 nomor whatsapp, dan pesan tersebut berhasil dikirimkan, maka quota anda akan terpotong sebesar **1 Nomor \* 1.000 Quota Gratis = 1.000 Quota**, dan saldo anda akan terpotong sebesar **Rp. 600 x 1.000 = Rp. 600.000**, dan saldo anda akan terpotong setiap anda mengirimkan pesan ke nomor whatsapp setelah 24 jam.
 
 Berikut adalah contoh pengiriman pesan ke 2000 nomor whatsapp:
-| No | Waktu | Pesan | Status | Tujuan |
-| --- | --- | --- | --- | --- |
-| 1 | 07:00 | Pesan 1 | Sukses | 2000 Nomor |
-| 2 | 12:01 | Pesan 2 | Sukses | 2000 Nomor |
-| 3 | 14:02 | Pesan 3 | Sukses | 2000 Nomor |
+
+| No  | Waktu | Pesan   | Status | Tujuan     |
+| --- | ----- | ------- | ------ | ---------- |
+| 1   | 07:00 | Pesan 1 | Sukses | 2000 Nomor |
+| 2   | 12:01 | Pesan 2 | Sukses | 2000 Nomor |
+| 3   | 14:02 | Pesan 3 | Sukses | 2000 Nomor |
 
 Anda mengirimkan 3x pesan ke 2000 nomor whatsapp, yang kami tagihkan yaitu pada **Pesan 1**, selanjutnya **Pesan 2** dan **Pesan 3** tidak akan terpotong dari saldo anda, karena anda masih dalam masa session 24 jam.
