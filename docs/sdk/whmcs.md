@@ -22,16 +22,16 @@ Pastikan anda memilih kategori berikut:
 - Body:
 
 ```
-Halo {{1}},
-Login baru oleh admin/staff dengan akun: *{{2}}* pada website: {{3}}.
+Halo {{admin_name}},
+Login baru oleh admin/staff dengan akun: *{{username}}* pada website: {{website_url}}.
 
 Access Detail:
-*Waktu* : {{4}}
-*Alamat IP* : {{5}}
-*Browser* : {{6}}
+*Waktu* : {{date_time}}
+*Alamat IP* : {{ip_address}}
+*Browser* : {{user_agent}}
 
 Sekian Informasinya.
-{{7}}
+{{website_name}}
 ```
 
 ### Admin Order Notification
@@ -42,19 +42,19 @@ Sekian Informasinya.
 - Body:
 
 ```
-Halo {{1}},
+Halo {{client_first_name}},
 Ada Order Baru, Detail Order:
 
-*Order Time* : {{2}} 
-*Order ID* : {{3}}
-*Order Number* : {{4}}
+*Order Time* : {{order_time}} 
+*Order ID* : {{order_id}}
+*Order Number* : {{order_number}}
 
-*Invoice* : {{5}}
-*Payment Method* : {{6}}
-*Total* : {{7}}
+*Invoice* : {{invoice_number}}
+*Payment Method* : {{payment_method}}
+*Total* : {{invoice_total}}
 
 Sekian Informasinya.
-{{8}}
+{{company_name}}
 ```
 - Button: 
 
