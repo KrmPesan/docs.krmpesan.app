@@ -31,7 +31,7 @@ Access Detail:
 *Browser* : {{user_agent}}
 
 Sekian Informasinya.
-{{website_name}}
+{{company_name}}
 ```
 
 ### Admin Order Notification
@@ -43,7 +43,7 @@ Sekian Informasinya.
 
 ```
 Halo {{client_first_name}},
-Ada Order Baru, Detail Order:
+Ada Order Baru di website {{website_url}}, Detail Order:
 
 *Order Time* : {{order_time}} 
 *Order ID* : {{order_id}}
@@ -66,31 +66,31 @@ Sekian Informasinya.
 - Body:
 
 ```
-Halo {{1}},
-Ada Rezeki nih, udah masuk ke rekening admin.
+Halo {{admin_name}},
+Ada transaksi pembayaran baru sudah masuk ke website {{website_url}}, detail transaksi:
 
-*Nomor Invoice* : {{2}}
-*Total* : {{3}}
+*Nomor Invoice* : {{invoice_number}}
+*Total* : {{invoice_total}}
 
-Ditransfer Oleh: *{{4}}* - *{{5}}*
+Ditransfer Oleh: *{{client_first_name}}* - *{{client_email}}*
 
 Sekian Informasinya.
-{{6}}
+{{company_name}}
 ```
 
 
 ### Admin Support Ticket
 
 ```
-Halo {{1}},
-Berikut support tiket {{2}} yang harus anda cek.
+Halo {{admin_name}},
+Berikut support tiket {{2}} yang harus anda cek pada website {{website_url}}.
 
 Detail Support Tiket:
-*ID*: #{{3}}
-*Subject* : {{4}}
-*Priority* : {{5}}
-*Department* : {{6}}
+*ID*: #{{ticket_id}}
+*Subject* : {{ticket_subject}}
+*Priority* : {{ticket_priority}}
+*Department* : {{ticket_department}}
 
 Sekian Informasinya.
-{{7}}
+{{company_name}}
 ```
