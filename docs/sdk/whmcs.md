@@ -26,9 +26,11 @@ Halo {{admin_name}},
 Login baru oleh admin/staff dengan akun: *{{username}}* pada website: {{website_url}}.
 
 Access Detail:
+----------------
 *Waktu* : {{date_time}}
 *Alamat IP* : {{ip_address}}
 *Browser* : {{user_agent}}
+----------------
 
 Sekian Informasinya.
 {{company_name}}
@@ -42,16 +44,19 @@ Sekian Informasinya.
 - Body:
 
 ```
-Halo {{client_first_name}},
-Ada Order Baru di website {{website_url}}, Detail Order:
+Halo {{admin_name}},
+Ada Order Baru di website {{website_url}}.
 
+Detail Order:
+----------------
 *Order Time* : {{order_time}} 
 *Order ID* : {{order_id}}
 *Order Number* : {{order_number}}
-
+----------------
 *Invoice* : {{invoice_number}}
 *Payment Method* : {{payment_method}}
 *Total* : {{invoice_total}}
+----------------
 
 Sekian Informasinya.
 {{company_name}}
@@ -67,12 +72,18 @@ Sekian Informasinya.
 
 ```
 Halo {{admin_name}},
-Ada transaksi pembayaran baru sudah masuk ke website {{website_url}}, detail transaksi:
+Ada transaksi pembayaran baru sudah masuk di website {{website_url}}.
 
+Detail Transaksi:
+----------------
 *Nomor Invoice* : {{invoice_number}}
 *Total* : {{invoice_total}}
+----------------
 
-Ditransfer Oleh: *{{client_first_name}}* - *{{client_email}}*
+Ditransfer Oleh: 
+----------------
+Nama: *{{client_first_name}}*
+Email: *{{client_email}}*
 
 Sekian Informasinya.
 {{company_name}}
@@ -83,24 +94,26 @@ Sekian Informasinya.
 
 ```
 Halo {{admin_name}},
-Berikut support tiket {{2}} yang harus anda cek pada website {{website_url}}.
+Berikut support tiket {{ticket_action}} yang harus anda cek di website {{website_url}}.
 
 Detail Support Tiket:
+----------------
 *ID*: #{{ticket_id}}
 *Subject* : {{ticket_subject}}
 *Priority* : {{ticket_priority}}
 *Department* : {{ticket_department}}
+----------------
 
 Sekian Informasinya.
 {{company_name}}
 ```
 
 
-### Client Invoice Created
+### Client Invoice Created or Reminder
 
 ```
 Hi {{client_first_name}},
-Berikut Informasi Mengenai *Tagihan Baru* Untuk Langganan Produk Anda.
+Berikut Informasi Mengenai *{{invoice_action}}* Untuk Langganan Produk Anda.
 
 Detail:
 ----------------
@@ -116,123 +129,24 @@ Untuk Melakukan Pembayaran, Silahkan cek link tagihan pada halaman berikut:
 
 Kemudian ikuti instruksi sesuai metode pembayaran yang anda pilih.
 
-Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
-Hormat Kami,
-{{company_name}}
-```
-
-### Client Invoice Reminder
-
-```
-Hi {{client_first_name}},
-Berikut Informasi Mengenai *Pengingat Tagihan* Untuk Perpanjangan Langganan Produk Anda.
-
-Detail:
-----------------
-Nomor: *{{invoice_number}}*
-Jatuh Tempo: *{{invoice_due}}*
-Total: *{{invoice_total}}*
-Referensi: *INV-{{invoice_number}}*
-Payment Method : *{{payment_method}}*
-----------------
-
-Untuk Melakukan Pembayaran, Silahkan cek link tagihan pada halaman berikut:
-{{my_invoice_view}}
-
-Kemudian ikuti instruksi sesuai metode pembayaran yang anda pilih.
+_Pastikan anda membayar tagihan ini sebelum tanggal *Jatuh Tempo* untuk menghindari produk dihapus secara permanent_
 
 Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
 Hormat Kami,
 {{company_name}}
 ```
 
-### Client Invoice First Reminder
+### Client Ticket Open or Reply By Admin/Staff
 
 ```
 Hi {{client_first_name}},
-Berikut Informasi Mengenai *Pengingat Pertama* Tagihan Untuk Perpanjangan Langganan Produk Anda.
+Support Tiket Anda dengan nomor {{ticket_number}} telah di {{ticket_action}} Oleh Staff Kami.
 
-Detail:
+Detail Ticket:
 ----------------
-Nomor: *{{invoice_number}}*
-Jatuh Tempo: *{{invoice_due}}*
-Total: *{{invoice_total}}*
-Referensi: *INV-{{invoice_number}}*
-Payment Method : *{{payment_method}}*
-----------------
-
-Untuk Melakukan Pembayaran, Silahkan cek link tagihan pada halaman berikut:
-{{my_invoice_view}}
-
-Kemudian ikuti instruksi sesuai metode pembayaran yang anda pilih.
-
-Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
-Hormat Kami,
-{{company_name}}
-```
-
-
-### Client Invoice Second Reminder
-
-```
-Hi {{client_first_name}},
-Berikut Informasi Mengenai *Pengingat Kedua* Tagihan Untuk Perpanjangan Langganan Produk Anda.
-
-Detail:
-----------------
-Nomor: *{{invoice_number}}*
-Jatuh Tempo: *{{invoice_due}}*
-Total: *{{invoice_total}}*
-Referensi: *INV-{{invoice_number}}*
-Payment Method : *{{payment_method}}*
-----------------
-
-Untuk Melakukan Pembayaran, Silahkan cek link tagihan pada halaman berikut:
-{{my_invoice_view}}
-
-Kemudian ikuti instruksi sesuai metode pembayaran yang anda pilih.
-
-Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
-Hormat Kami,
-{{company_name}}
-```
-
-
-### Client Invoice Third Reminder
-
-```
-Hi {{client_first_name}},
-Berikut Informasi Mengenai *Pengingat Terakhir atau Ketiga* Tagihan Untuk Perpanjangan Langganan Produk Anda.
-
-*Perlu Di Catat, jika kami masih tidak menerima pembayaran mengenai tagihan ini, maka produk anda bisa di terminated atau di hapus kapan saja, Untuk menghindari hal tersebut, segera lunasi tagihan anda.*
-
-Detail:
-----------------
-Nomor: *{{invoice_number}}*
-Jatuh Tempo: *{{invoice_due}}*
-Total: *{{invoice_total}}*
-Referensi: *INV-{{invoice_number}}*
-Payment Method : *{{payment_method}}*
-----------------
-
-Untuk Melakukan Pembayaran, Silahkan cek link tagihan pada halaman berikut:
-{{my_invoice_view}}
-
-Kemudian ikuti instruksi sesuai metode pembayaran yang anda pilih.
-
-Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
-Hormat Kami,
-{{company_name}}
-```
-
-### Client Ticket Reply By Admin/Staff
-
-```
-Hi {{client_first_name}},
-Support Tiket {{ticket_number}} telah di {{ticket_action}} Oleh Staff Kami.
-
 *Ticket ID*: #{{ticket_id}}
 *Subject Ticket*: {{ticket_subject}}
+----------------
 
 Detail lengkap sudah kami kirim via email.
 
@@ -244,16 +158,18 @@ Hormat Kami,
 {{company_name}}
 ```
 
-### Client Product Terminated
+### Client Product Active, Suspend or Unsuspend
 
 ```
-Hi {{1}},
-Maaf, Produk Anda *{{2}}* - *{{3}}* Telah Di Hapus (Terminate) Secara Permanent.
+Hi {{client_first_name}},
+Berikut update status produk/layanan anda pada website kami {{website_url}}.
 
-Produk tidak bisa diaktifkan kembali.
-Jika anda ingin menggunakan produk yang sama, hanya bisa dengan order baru di website kami.
+{{product_action}}
 
-Pastikan untuk membayar tagihan sebelum jatuh tempo untuk menghindari produk di terminated karena jatuh tempo.
+{{product_description}}
+
+Jika ada pertanyaan tentang produk/layanan anda, jangan ragu untuk menghubungi kami di:
+{{open_ticket}}
 
 Hormat Kami,
 {{company_name}}
@@ -275,27 +191,13 @@ Hormat Kami,
 {{company_name}}
 ```
 
-```
-Hi {{1}},
-{{2}}, Produk Anda *{{3}}* - *{{4}}* Telah Di {{5}}.
-
-Detail lengkap sudah kami infokan via email.
-Silahkan cek email anda di Kotak Masuk/Spam Folder.
-
-Anda juga bisa mengecek langsung produk anda diwebsite kami.
-
-Tutorial penggunaan produk kami bisa cek di {{6}}
-
-Jika ada pertanyaan, jangan ragu untuk menghubungi kami di :
-{{7}}
-
-Hormat Kami,
-{{8}}
-```
+### Client Ticket Open
 
 ```
-Hi {{1}},
-Kami telah menerima tiket baru dari anda. Detail:
+Hi {{client_first_name}},
+Terimakasih telah Kami telah menerima tiket baru dari anda.
+
+Detail:
 
 *Ticket ID*: #{{2}}
 *Subject* : {{3}}
@@ -309,6 +211,7 @@ Hormat Kami,
 {{6}}
 ```
 
+### Client Login
 
 ```
 Hi {{1}},
