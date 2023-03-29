@@ -166,7 +166,12 @@ Berikut update status produk/layanan anda pada website kami {{website_url}}.
 
 {{product_action}}
 
-{{product_description}}
+----------------
+*Name*: {{product_name}}
+*Expired*: {{product_expired}}
+----------------
+
+Detail lengkap juga kami kirimkan melalui email.
 
 Jika ada pertanyaan tentang produk/layanan anda, jangan ragu untuk menghubungi kami di:
 {{open_ticket}}
@@ -183,8 +188,10 @@ Selamat Datang dan Selamat Bergabung Di {{company_name}}.
 
 Silahkan cek kotak masuk/spam folder pada email anda untuk verifikasi alamat email yang anda daftarkan pada website kami {{website_url}}
 
+----------------
 Email: {{client_email}}
 Telp: {{client_phone}}
+----------------
 
 Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
 Hormat Kami,
@@ -195,36 +202,40 @@ Hormat Kami,
 
 ```
 Hi {{client_first_name}},
-Terimakasih telah Kami telah menerima tiket baru dari anda.
+Kami telah menerima tiket terbaru dari anda yang anda kirimkan pada website kami {{website_url}}
 
 Detail:
-
-*Ticket ID*: #{{2}}
-*Subject* : {{3}}
-*Priority* : {{4}}
-*Department* : {{5}}
+----------------
+*Ticket ID*: #{{ticket_id}}
+*Subject* : {{ticket_subject}}
+*Priority* : {{ticket_priority}}
+*Department* : {{ticket_department}}
+----------------
 
 Tiket anda akan kami respon secepatnya ketika staff kami online.
 Mohon kesediaannya menunggu.
 
+Sekian informasi yang dapat kami sampaikan.
 Hormat Kami,
-{{6}}
+{{company_name}}
 ```
 
 ### Client Login
 
 ```
-Hi {{1}},
-Kamu baru saja {{2}} pada akun dengan email: *{{3}}* yang terdaftar pada website kami: {{4}}
+Halo {{client_first_name}},
+Kamu baru saja {{login_action}} dengan email *{{client_email}}* pada website kami: {{website_url}}
 
-Detail Akses:
-*Waktu* : {{5}}
-*Alamat IP* : {{6}}
-*Browser* : {{7}}
+Access Detail:
+----------------
+*Waktu* : {{date_time}}
+*Alamat IP* : {{ip_address}}
+*Browser* : {{user_agent}}
+----------------
 
 Jika ini bukan anda, harap segera mereset akun anda secepatnya, atau bisa menghubungi kami untuk meminta bantuan reset akun tersebut.
 
 Sekian informasi yang dapat kami sampaikan.
 Hormat Kami,
-{{8}}
+{{company_name}}
 ```
