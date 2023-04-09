@@ -136,6 +136,25 @@ Hormat Kami,
 {{company_name}}
 ```
 
+
+### Client Payment Confirmation
+
+```
+Hi {{client_first_name}},
+Pembayaran anda sudah kami terima dan berhasil di konfirmasi pada website kami {{website_url}}.
+
+Detail:
+----------------
+Nomor: *{{invoice_number}}*
+Total: *{{invoice_total}}*
+Payment Method : *{{payment_method}}*
+----------------
+
+Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
+Hormat Kami,
+{{company_name}}
+```
+
 ### Client Ticket Open or Reply By Admin/Staff
 
 ```
