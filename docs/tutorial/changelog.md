@@ -17,6 +17,10 @@ sidebar_position: 999
 - Update Avatar User
 - Update User Menu in Top Right
 - Update Status Message in /messages
+- Update Dashboard - Sort By Desc
+- Added Google Analytics 4
+- Added Sentry Logs
+- Improvement Unused Code
 
 ## 2023-02-15
 
