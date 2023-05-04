@@ -1,0 +1,8 @@
+{
+  "label": "Integration - PHP",
+  "position": 111,
+  "link": {
+    "type": "generated-index",
+    "description": "Integration to REST API with PHP."
+  }
+}
