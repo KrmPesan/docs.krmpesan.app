@@ -74,6 +74,12 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'video/tutorial-01',
+            position: 'left',
+            label: 'Video Tutorial',
+          },
+          {
+            type: 'doc',
             docId: 'api/intro',
             position: 'left',
             label: 'API',
