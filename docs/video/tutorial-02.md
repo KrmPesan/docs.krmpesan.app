@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Tutorial 2 - LOGIN & RESET PASSWORD
+# Tutorial 2 - Login & Reset Password
 
 ## Streaming
 
