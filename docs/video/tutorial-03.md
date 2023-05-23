@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Tutorial 2 - Login dan Reset Password
+# Tutorial 3 - Membuat Template Pesan
 
 ## Streaming
 
