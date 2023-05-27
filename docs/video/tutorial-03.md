@@ -10,4 +10,4 @@ __IN PROGRESS__
 
 ## Direct Streaming
 
-Tidak bisa memutar video? [Putar di Youtube](https://youtu.be/)
+__IN PROGRESS__
