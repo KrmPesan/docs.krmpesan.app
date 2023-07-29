@@ -10,8 +10,11 @@ Tutorial ini adalah cara penggunaan dokumentasi kami
 
 Anda bisa akses Postman Collection kami pada link berikut: 
 
-[https://documenter.getpostman.com/view/4673729/2s935oMjda](https://documenter.getpostman.com/view/4673729/2s935oMjda)
+[https://postman.krmpesan.app](https://postman.krmpesan.app)
 
+:::warning
+Karena beberapa perubahan pada collection, terkadang collection lama mengalami bentrok ketika di publish, silahkan gunakan boormark domain diatas untuk mengakses postman collection terbaru
+:::
 
 ### API 
 
