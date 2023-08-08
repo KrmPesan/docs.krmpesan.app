@@ -16,6 +16,7 @@ sidebar_position: 999
 - Update URL CDN Assets to [https://cdn.krmpesan.app](https://cdn.krmpesan.app)
 - Update Support Category Authentication/ OTP
 - Migrate Documentation Postman to [https://postman.krmpesan.app](https://postman.krmpesan.app)
+- Another Bug Fixed
 
 ### Website
 
@@ -24,6 +25,7 @@ sidebar_position: 999
 - Update Pages /new - Added Support Authentication / OTP Category
 - Update Support For CDN Assets [https://cdn.krmpesan.app](https://cdn.krmpesan.app)
 - Update Website With CDN Access [https://krmpesan.app](https://krmpesan.app)
+- Update Statistics Sort in Homepage
 
 ## 2023-04-11
 
