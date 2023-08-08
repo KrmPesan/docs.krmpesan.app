@@ -1,54 +1,54 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Docs KrmPesan',
-  tagline: 'Documentation',
-  favicon: 'img/favicon.ico',
+  title: "Docs KrmPesan",
+  tagline: "Documentation",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://docs.krmpesan.app',
+  url: "https://docs.krmpesan.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'KrmPesan', // Usually your GitHub org/user name.
-  projectName: 'docs.krmpesan.app', // Usually your repo name.
+  organizationName: "KrmPesan", // Usually your GitHub org/user name.
+  projectName: "docs.krmpesan.app", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'id',
-    locales: ['id'],
+    defaultLocale: "id",
+    locales: ["id"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -58,63 +58,69 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'Documentation',
+        title: "Documentation",
         logo: {
-          alt: 'Documentation',
-          src: 'img/logo.svg',
+          alt: "Documentation",
+          src: "img/logo.svg",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'tutorial/intro',
-            position: 'left',
-            label: 'Getting Started',
+            type: "doc",
+            docId: "tutorial/intro",
+            position: "left",
+            label: "Getting Started",
           },
           {
-            type: 'doc',
-            docId: 'video/tutorial-01',
-            position: 'left',
-            label: 'Video Tutorial',
+            type: "doc",
+            docId: "video/tutorial-01",
+            position: "left",
+            label: "Video Tutorial",
           },
           {
-            type: 'doc',
-            docId: 'api/intro',
-            position: 'left',
-            label: 'API',
+            type: "doc",
+            docId: "api/intro",
+            position: "left",
+            label: "API",
           },
           {
-            type: 'doc',
-            docId: 'sdk/intro',
-            position: 'left',
-            label: 'SDK',
+            type: "doc",
+            docId: "sdk/intro",
+            position: "left",
+            label: "SDK",
           },
           {
-            href: 'https://github.com/KrmPesan/docs.krmpesan.app',
-            label: 'GitHub',
-            position: 'right',
+            type: "doc",
+            docId: "changelog",
+            position: "left",
+            label: "Changelog",
+          },
+          {
+            href: "https://github.com/KrmPesan/docs.krmpesan.app",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/tutorial/intro',
+                label: "Tutorial",
+                to: "/docs/tutorial/intro",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/KrmPesan/docs.krmpesan.app',
+                label: "GitHub",
+                href: "https://github.com/KrmPesan/docs.krmpesan.app",
               },
             ],
           },
@@ -122,7 +128,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} KrmPesan. Built with Docusaurus.`,
       },
       prism: {
-        theme: require('prism-react-renderer/themes/dracula'),
+        theme: require("prism-react-renderer/themes/dracula"),
         darkTheme: darkCodeTheme,
       },
       tableOfContents: {
@@ -134,7 +140,7 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["@docusaurus/theme-mermaid"],
 };
 
 module.exports = config;
