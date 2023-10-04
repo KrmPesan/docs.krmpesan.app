@@ -135,6 +135,21 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "1C7SNO2BZZ",
+
+        // Public API key: it is safe to commit it
+        apiKey: "0597fbe9cca408c46e1f786b1baff6d5",
+
+        indexName: "krmpesan",
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: "search",
+      },
     }),
 
   markdown: {
