@@ -1,0 +1,112 @@
+backend:
+  name: github
+  branch: master
+  repo: KrmPesan/docs.krmpesan.com
+  base_url: https://oauth.krmpesan.com
+  auth_endpoint: /auth
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}” [skip ci]
+    deleteMedia: Delete “{{path}}” [skip ci]
+    openAuthoring: "{{message}}"
+
+# These lines should *not* be indented
+media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: blog
+    label: "Blog"
+    folder: blog
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: slug, label: Slug, widget: string }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        fields:
+          - { name: name, label: Name, widget: string }
+          - { name: title, label: Title, widget: string }
+          - { name: url, label: URL, widget: string }
+          - { name: imageUrl, label: ImageURL, widget: string }
+
+  - name: tutorial
+    label: "Tutorial"
+    folder: docs/tutorial
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: sidebar_position, label: Sidebar Position, widget: number }
+
+  - name: video
+    label: "Video Tutorial"
+    folder: docs/video
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: sidebar_position, label: Sidebar Position, widget: number }
+
+  - name: sdk
+    label: "SDK"
+    folder: docs/sdk
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: sidebar_position, label: Sidebar Position, widget: number }
+
+  - name: api
+    label: "API"
+    folder: docs/api
+    identifier_field: title
+    extension: md
+    widget: "list"
+    create: true
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Body, widget: markdown }
+      - { name: sidebar_position, label: Sidebar Position, widget: number }
+
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Registration"
+        name: "registration"
+        file: "docs/registration.md"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+          - { name: sidebar_position, label: Sidebar Position, widget: number }
+      - label: "Changelog"
+        name: "changelog"
+        file: "docs/changelog.md"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+          - { name: sidebar_position, label: Sidebar Position, widget: number }
