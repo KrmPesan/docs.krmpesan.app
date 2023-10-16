@@ -1,7 +1,7 @@
 backend:
   name: github
-  branch: master
-  repo: KrmPesan/docs.krmpesan.com
+  branch: main
+  repo: KrmPesan/docs.krmpesan.app
   base_url: https://oauth.krmpesan.com
   auth_endpoint: /auth
   commit_messages:
