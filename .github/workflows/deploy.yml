@@ -65,11 +65,7 @@ jobs:
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ env.AWS_CLOUDFRONT_ID }} \
-            --paths "/index.html"
-
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ env.AWS_CLOUDFRONT_ID }} \
-            --paths "/admin/config.yml"
+            --paths "/index.html" "/admin/config.yml"
 
   done:
     runs-on: ubuntu-latest
