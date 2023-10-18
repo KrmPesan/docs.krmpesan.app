@@ -1,8 +1,7 @@
 ---
+title: Tutorial 3 - Membuat Template Pesan
 sidebar_position: 3
 ---
-
-# Tutorial 3 - Membuat Template Pesan
 
 ## Streaming
 

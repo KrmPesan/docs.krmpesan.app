@@ -1,8 +1,7 @@
 ---
+title: Tutorial 7 - API Integrasi Menggunakan PHP SDK
 sidebar_position: 7
 ---
-
-# Tutorial 7 - API Integrasi Menggunakan PHP SDK
 
 ## Streaming
 

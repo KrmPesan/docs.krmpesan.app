@@ -1,8 +1,7 @@
 ---
+title: Tutorial 6 - Test API & Integrasi Semua Bahasa Pemograman via Postman
 sidebar_position: 6
 ---
-
-# Tutorial 6 - Test API & Integrasi Semua Bahasa Pemograman via Postman
 
 ## Streaming
 

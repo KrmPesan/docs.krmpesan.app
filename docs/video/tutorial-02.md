@@ -1,8 +1,7 @@
 ---
+title: Tutorial 2 - Login dan Reset Password
 sidebar_position: 2
 ---
-
-# Tutorial 2 - Login dan Reset Password
 
 ## Streaming
 

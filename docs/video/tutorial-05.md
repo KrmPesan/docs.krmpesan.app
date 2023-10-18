@@ -1,8 +1,7 @@
 ---
+title: Tutorial 5 - Membuat Token
 sidebar_position: 5
 ---
-
-# Tutorial 5 - Membuat Token
 
 ## Streaming
 

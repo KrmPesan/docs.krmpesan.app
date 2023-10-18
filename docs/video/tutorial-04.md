@@ -1,13 +1,12 @@
 ---
+title: Tutorial 4 - Kirim Pesan Menggunakan Template
 sidebar_position: 4
 ---
 
-# Tutorial 4 - Kirim Pesan Menggunakan Template
-
 ## Streaming
 
-__IN PROGRESS__
+**IN PROGRESS**
 
 ## Direct Streaming
 
-__IN PROGRESS__
+**IN PROGRESS**

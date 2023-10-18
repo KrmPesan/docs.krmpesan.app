@@ -1,8 +1,7 @@
 ---
+title: Tutorial 1 - Aktivasi Akun
 sidebar_position: 1
 ---
-
-# Tutorial 1 - Aktivasi Akun
 
 ## Streaming
 
