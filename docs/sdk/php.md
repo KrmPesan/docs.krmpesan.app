@@ -1,8 +1,7 @@
 ---
+title: PHP
 sidebar_position: 2
 ---
-
-# PHP
 
 ## Flow
 
@@ -23,7 +22,6 @@ graph TD
     E --> F[Token Berhasil Dibuat]
     F --> G[Simpan Token: `IdToken`, `RefreshToken`, `DeviceId`]
 ```
-
 
 ## Instalasi
 
@@ -69,8 +67,8 @@ Hanya 2 object yang penting anda harus simpan di `token.json`, yaitu `refreshTok
 
 ```json
 {
-    "refreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxxxxxx",
-    "deviceId":"ap-southeast-1_db47767c-5116-48e5-a74a-2f9dca674bac"
+  "refreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxxxxxx",
+  "deviceId": "ap-southeast-1_db47767c-5116-48e5-a74a-2f9dca674bac"
 }
 ```
 

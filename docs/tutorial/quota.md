@@ -1,8 +1,7 @@
 ---
+title: Quota
 sidebar_position: 3
 ---
-
-# Quota
 
 Sebelum anda mulai menggunakan aplikasi kami, anda harus memiliki quota untuk mengirimkan pesan.
 

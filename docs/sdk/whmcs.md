@@ -1,8 +1,7 @@
 ---
+title: WHMCS
 sidebar_position: 3
 ---
-
-# WHMCS
 
 ## Installation
 
@@ -12,7 +11,6 @@ Pastikan anda memilih kategori berikut:
 
 - Category: `Transactional/Utility`
 - Language: `Indonesia`
-
 
 ### Admin Login
 
@@ -49,7 +47,7 @@ Ada Order Baru di website {{website_url}}.
 
 Detail Order:
 ----------------
-*Order Time* : {{order_time}} 
+*Order Time* : {{order_time}}
 *Order ID* : {{order_id}}
 *Order Number* : {{order_number}}
 ----------------
@@ -61,7 +59,8 @@ Detail Order:
 Sekian Informasinya.
 {{company_name}}
 ```
-- Button: 
+
+- Button:
 
 ### Admin Payment Notification
 
@@ -80,7 +79,7 @@ Detail Transaksi:
 *Total* : {{invoice_total}}
 ----------------
 
-Ditransfer Oleh: 
+Ditransfer Oleh:
 ----------------
 Nama: *{{client_first_name}}*
 Email: *{{client_email}}*
@@ -88,7 +87,6 @@ Email: *{{client_email}}*
 Sekian Informasinya.
 {{company_name}}
 ```
-
 
 ### Admin Support Ticket
 
@@ -107,7 +105,6 @@ Detail Support Tiket:
 Sekian Informasinya.
 {{company_name}}
 ```
-
 
 ### Client Invoice Created or Reminder
 
@@ -135,7 +132,6 @@ Jika ada pertanyaan, jangan ragu untuk menghubungi kami.
 Hormat Kami,
 {{company_name}}
 ```
-
 
 ### Client Payment Confirmation
 
@@ -169,7 +165,7 @@ Detail Ticket:
 
 Detail lengkap sudah kami kirim via email.
 
-Anda bisa cek status ticket anda langsung melalui website kami di 
+Anda bisa cek status ticket anda langsung melalui website kami di
 {{support_ticket}}
 
 Jika ada pertanyaan, jangan ragu untuk menghubungi kami.

@@ -1,8 +1,7 @@
 ---
+title: Changelog
 sidebar_position: 999
 ---
-
-# Changelog
 
 ## 2023-08-01
 

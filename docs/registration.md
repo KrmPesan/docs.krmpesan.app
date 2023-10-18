@@ -1,8 +1,7 @@
 ---
+title: Registration Process
 sidebar_position: 2
 ---
-
-# Registration Process
 
 Pada dokumentasi ini, kami akan membahas proses registrasi yang akan dilakukan oleh user dan kami sebagai penyedia layanan.
 
@@ -30,7 +29,6 @@ D --> E[Order Confirmation]
 Setelah kami menerima pembayaran, kami akan mengirimkan email konfirmasi ke user dan kami akan memproses orderan user tersebut.
 
 ## Provider Registration
-
 
 ```mermaid
 graph TD
